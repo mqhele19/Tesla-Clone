@@ -1,10 +1,19 @@
 import React from 'react';
-import {View, Text} from 'react-native';
+import {View, Text, Pressable} from 'react-native';
+import styles from './styles';
 
 const StyledButton = (props) => {
 	return (
-	<View>
-	<Text>Just a component</Text>
+	<View style={styles.container}>
+	<Pressable
+		style={styles.button}
+		onPress={() =>{
+			console.warn(data,'Hey There')
+			//console.warn(data, 'hey there')
+		}}
+		>
+		<Text style={styles.text}>Custom Order</Text>
+	</Pressable>
 	</View>
 	);
 	};
